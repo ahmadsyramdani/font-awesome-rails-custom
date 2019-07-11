@@ -10,12 +10,13 @@ stylesheets as a Rails engine for use with the asset pipeline.
 
 ## Installation
 
-Add this to your Gemfile:
+clone to your vendor/gems/
+
+add to your gemfile
 
 ```ruby
-gem "font-awesome-rails"
+gem 'font-awesome-rails', path: 'vendor/gems/font-awesome-rails-custom'
 ```
-
 and run `bundle install`.
 
 ## Usage
@@ -54,6 +55,7 @@ add this to your `application.css.sass` file:
 There are also some helpers (`fa_icon` and `fa_stacked_icon`) that make your
 views _icontastic!_
 
+`fa`
 ```ruby
 fa_icon "camera-retro"
 # => <i class="fa fa-camera-retro"></i>
@@ -68,6 +70,24 @@ fa_icon "quote-left 4x", class: "text-muted pull-left"
 # => <i class="fa fa-quote-left fa-4x text-muted pull-left"></i>
 
 content_tag(:li, fa_icon("check li", text: "Bulleted list item"))
+# => <li><i class="fa fa-check fa-li"></i> Bulleted list item</li>
+```
+
+`fab`
+```ruby
+fab_icon "camera-retro"
+# => <i class="fa fa-camera-retro"></i>
+
+fab_icon "camera-retro", text: "Take a photo"
+# => <i class="fa fa-camera-retro"></i> Take a photo
+
+fab_icon "chevron-right", text: "Get started", right: true
+# => Get started <i class="fa fa-chevron-right"></i>
+
+fab_icon "quote-left 4x", class: "text-muted pull-left"
+# => <i class="fa fa-quote-left fa-4x text-muted pull-left"></i>
+
+content_tag(:li, fab_icon("check li", text: "Bulleted list item"))
 # => <li><i class="fa fa-check fa-li"></i> Bulleted list item</li>
 ```
 
