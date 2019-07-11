@@ -8,6 +8,9 @@ font-awesome-rails provides the
 [Font-Awesome](http://fortawesome.github.com/Font-Awesome/) web fonts and
 stylesheets as a Rails engine for use with the asset pipeline.
 
+`font-awesome Version 5.9.0`
+`SUPPORT LINE icon`
+
 ## Installation
 
 clone to your vendor/gems/
